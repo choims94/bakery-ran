@@ -261,7 +261,7 @@ async def generate_sns_posts(request: GenerateRequest):
     _ensure_api_key()
 
     try:
-        llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0.7)
+        llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.7)
 
         # 1. Enhanced Trend Analysis
         filtered_trends, _ = get_enhanced_trends()
@@ -298,7 +298,7 @@ async def generate_weekly_calendar(request: CalendarRequest):
     _ensure_api_key()
 
     try:
-        llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0.7)
+        llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.7)
 
         filtered_trends, _ = get_enhanced_trends()
         trends_str = ", ".join(filtered_trends)
